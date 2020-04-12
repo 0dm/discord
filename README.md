@@ -1,2 +1,2 @@
 # discord
-my discord stuff
+Projects for Discord
