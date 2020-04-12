@@ -1,0 +1,2 @@
+# discord
+my discord stuff
