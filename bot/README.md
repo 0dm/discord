@@ -1,4 +1,4 @@
-useless Discord Bot using discord.js
+useless Discord Bot made for my server for some jokes using discord.js
 
 Must add token to config file.
 
