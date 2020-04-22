@@ -215,13 +215,13 @@ bot.on('message', async msg => {
                 .setAuthor("sauceBot", bot.user.avatarURL())
                 .setColor(0x10FFFF)
                 .setDescription("Hey, I'm a bot written in Discord.JS that could do *many* things but I choose not to. Why? There's so many bots these days that we need a little bit of variety.")
-                .setFooter("fuck you, especially you, Viktor.")
-                .setImage("https://media0.giphy.com/media/J32hiijciT1GE/source.gif")
+                .setFooter("woooooooo")
+                .setImage("https://i.imgur.com/817N9sI.gif")
                 .setThumbnail(bot.user.avatarURL())
                 .setTimestamp()
                 .addField(";help", "and get started", false)
                 .addField("**Uptime:**", msToTime(bot.uptime) + '', false)
-                .setURL("https://steamcommunity.com/id/saucy26/")
+                .setURL("https://saucyx.github.io/")
             /*
               .addField("This is a field title, it can hold 256 characters",
               .addField("Inline Field", "They can also be inline.", true)
