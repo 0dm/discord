@@ -19,7 +19,7 @@ bot.settings = new Enmap({
 const defaultSettings = {
     prefix: ';',
     welcomeChannel: "general",
-    welcomeMessage: "hey {{user}}, fuck you.",
+    welcomeMessage: "hey {{user}}, what's up",
     cooldown: 0
 }
 
@@ -103,35 +103,35 @@ bot.on('message', async msg => {
             break;
 
         case 'calculate':
-            msg.reply("fuck you, there's literally a calculator on your PC");
+            msg.reply("there's literally a calculator on your PC, try it.");
             break;
 
         case 'kick':
             if (msg.member.hasPermission('KICK_MEMBERS'))
-                msg.reply("fuck you just right click on them you lazy sack of shit");
+                msg.reply("just right click on them lazy");
             else
                 msg.reply("you wish")
             break;
 
         case 'ban':
             if (msg.member.hasPermission('BAN_MEMBERS'))
-                msg.reply("fuck you just right click on them you lazy sack of shit");
+                msg.reply("just right click on them lazy");
             else
                 msg.reply("you wish");
             break;
 
         case 'notify':
-            msg.reply("fuck you, do it yourself");
+            msg.reply("do it yourself");
             break;
 
         case 'mute':
-            msg.reply("fuck you, literally just right click");
+            msg.reply("literally just right click");
             break;
         case 'announce':
             if (msg.member.hasPermission('ADMINISTRATOR'))
-                msg.reply("says fuck you to @everyone");
+                msg.reply("loves @everyone");
             else
-                msg.reply("nah fuck you")
+                msg.reply("nah")
             break;
 
         case 'search':
@@ -222,11 +222,6 @@ bot.on('message', async msg => {
                 .addField(";help", "and get started", false)
                 .addField("**Uptime:**", msToTime(bot.uptime) + '', false)
                 .setURL("https://saucyx.github.io/")
-            /*
-              .addField("This is a field title, it can hold 256 characters",
-              .addField("Inline Field", "They can also be inline.", true)
-              .addBlankField(true)
-            */
             msg.channel.send(embed);
             break;
 
@@ -314,7 +309,7 @@ bot.on('message', async msg => {
 
         botMsg.edit({
             embed: {
-                title: "fuck you 📶",
+                title: "pong 📶",
                 description: [
                     "**Server**: `" + (botMsg.createdAt - msg.createdAt) + "ms`",
                     "**API**: `" + Math.round(bot.ws.ping) + "ms`",
