@@ -7,7 +7,7 @@ module.exports = {
             embed: {
                 title: msg.author.tag + " is hopping on :white_check_mark: ",
                 description: [
-                   msg.author.tag + " will accept their fate"
+                   "<@" + msg.author.id + ">" + " will accept their fate"
                 ].join("\n"),
                 color: 56319,
                 footer: {
