@@ -1,0 +1,8 @@
+const Discord = require('discord.js');
+module.exports = {
+    name: 'killserver',
+    description: 'cool link',
+    execute(bot,msg,args,guildConf){
+        msg.channel.send("https://images-ext-1.discordapp.net/external/3qJsIIlDH1oyBafwifdZ35LvC1_C0uyHCg2nGjkxRr4/%3Fwidth%3D41%26height%3D43/https/images-ext-1.discordapp.net/external/ePwzmrv7_IqtTsDOJfN4zhyK9x04RvBXyBlMe_GLTM8/%253Fwidth%253D51%2526height%253D53/https/images-ext-2.discordapp.net/external/CrOyUPyi4PY-SBsg3lR7c1D0Y4PBPGlEt-oD9EO9tqs/%25253Fwidth%25253D63%252526height%25253D65/https/images-ext-1.discordapp.net/external/v2UlOdSXdpvh-ySd6bPP73Oq98nKmvr-vAAmz2lEm3c/%2525253Fwidth%2525253D78%25252526height%2525253D81/https/images-ext-2.discordapp.net/external/O1FzyZXy72L2Os77Lhc_EaT_wcH5Up69bF-g6_XDxYI/%252525253Fwidth%252525253D97%2525252526height%252525253D101/https/images-ext-1.discordapp.net/external/DGfIHYpIM0ZsD1hyUfznGz780KgGkzfJrtNxZuQbGCE/%25252525253Fwidth%25252525253D120%252525252526height%25252525253D125/https/images-ext-1.discordapp.net/external/Q33OW84DKCgtRI5rcZehKTqyGfRsjgDEB5dNdYsd9_k/%2525252525253Fwidth%2525252525253D149%25252525252526height%2525252525253D155/https/images-ext-2.discordapp.net/external/S_YDfZ0scqfEcvmUu4rbWRzFIer-0n6Uio6dGPZv9Lk/%252525252525253Fwidth%252525252525253D185%2525252525252526height%252525252525253D193/https/images-ext-2.discordapp.net/external/ICf9NsvE61OSwM1ocYVlSjjy4J2nwy3tdXaIGVa9_tI/%25252525252525253Fwidth%25252525252525253D231%252525252525252526height%25252525252525253D241/https/images-ext-2.discordapp.net/external/DzgYTqjFs-B07s2XyP3wiJAlahWBo9-YOK2BsgDvgPU/https/i.redd.it/hqx7okmi64c11.gif?width=33&height=35");
+    },
+};
