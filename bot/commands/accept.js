@@ -5,7 +5,7 @@ module.exports = {
     execute(bot,msg,args,guildConf){
         msg.channel.send({
             embed: {
-                title: "Hop On Accepted :white_check_mark: ",
+                title: msg.author.tag + " is hopping on :white_check_mark: ",
                 description: [
                    msg.author.tag + " will accept their fate"
                 ].join("\n"),

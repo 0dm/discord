@@ -10,7 +10,7 @@ module.exports = {
         if (user != 215190712063492096) { // bot owner, never tell me to hop on ever again Jacob.
             msg.channel.send({
                 embed: {
-                    title: "hop on request :question:",
+                    title: "Hop on :question:",
                     description: [
                          "hop on <@" + user + ">"
                     ].join("\n"),
