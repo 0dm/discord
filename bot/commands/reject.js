@@ -36,7 +36,7 @@ module.exports = {
             embed: {
                 title: msg.author.tag + " will not be hopping on :no_entry_sign: ",
                 description: desc,
-                color: 56319,
+                color: 15158332,
                 footer: {
                     text: "Rejected by " + msg.author.tag,
                     icon_url: msg.author.avatarURL()
