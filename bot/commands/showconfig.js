@@ -10,7 +10,7 @@ module.exports = {
       msg.channel.send({
           embed: {
               title: "Config :wrench:",
-              description: `\`\`\`${configProps.join("\n")}\`\`\``,
+              description: `\`\`${configProps.join("\n")}\`\``,
               color: 6816001,
               footer: {
                   text: "Requested by " + msg.author.tag,
