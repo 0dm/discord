@@ -4,15 +4,13 @@ module.exports = {
     description: 'show configuration',
     execute(bot,msg,args,guildConf){
         let configProps = Object.keys(guildConf).map(prop => {
-            return `${prop}: ${guildConf[prop]}\n`
+            return `${prop}: ${guildConf[prop]}`;
         });
         //Depracated     msg.channel.send(`Server Config: \`\`\`${configProps}\`\`\``);
       msg.channel.send({
           embed: {
               title: "Config :wrench:",
-              description: [
-                  `${configProps}`
-              ].join("\n"),
+              description: `\`\`\`${configProps.join("\n")}\`\`\``,
               color: 6816001,
               footer: {
                   text: "Requested by " + msg.author.tag,
