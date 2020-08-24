@@ -1,13 +1,14 @@
-const Discord = require('discord.js');
+const func = require("../functions.js");
 module.exports = {
     name: 'hopon',
     description: 'gets someone to hop on',
     execute(bot,msg,args,guildConf){
+        async function asynchopon() {
         user = msg.mentions.users.first();
         if (!user){
             return msg.reply('Usage:\n' + '`' + guildConf.prefix + 'hopon <user>`')
         }
-        if (user != 215190712063492096) { // bot owner, never tell me to hop on ever again Jacob.
+        if (user != msg.author.id) { 
             msg.channel.send({
                 embed: {
                     title: "Hop on :question:",
@@ -25,7 +26,9 @@ module.exports = {
                     timestamp: new Date()
                 }
             }).catch(() => msg.edit("error: give me embed permissions pls"));
-        } //else 
-           // msg.reply("soon™");
-    },
+        } else {
+        let no = await msg.reply("you can't tell yourself to hop on!");
+        func.sleep(3000).then(() => { no.delete();})
+        }   
+    }asynchopon();},
 };
