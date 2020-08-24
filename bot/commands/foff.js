@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 module.exports = {
-    name: 'foff',
+    name: 'fuckoff',
     description: 'used when this bot is a pain in the ass',
     execute(bot,msg,args,guildConf){
         if (msg.author.id == 215190712063492096) {
