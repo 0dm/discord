@@ -1,17 +1,17 @@
 const Discord = require('discord.js');
-const str1 = "will accept their fate.";
-const str2 = "will participate in gaming.";
-const str3 = "is never more here.";
-const str4 = "is ready to run it down.";
-const str5 = "has surrendered their will.";
+const str1 = "denies their fate.";
+const str2 = "hates gaming.";
+const str3 = "so sad";
+const str4 = "never hops on again?";
+const str5 = "goes AFK.";
 
 module.exports = {
-    name: 'accept',
-    aliases: ['yes', 'ye'],
-    description: 'accept your fate.',
+    name: 'reject',
+    aliases: ['no', 'nah'],
+    description: 'deny your fate.',
     execute(bot,msg,args,guildConf){
         let x = Math.floor(Math.random() * (5 - 1) + 1);
-        var z;
+        var z, desc;
         switch (x) {
             case 1:
                 z = str1;
@@ -29,15 +29,16 @@ module.exports = {
                 z = str5;
                 break;
         }
+        if (x != 3)
+             desc = "<@" + msg.author.id + "> " + z;
+        else desc = z;
         msg.channel.send({
             embed: {
-                title: msg.author.tag + " is hopping on :white_check_mark: ",
-                description: [
-                   "<@" + msg.author.id + "> " + z,
-                ].join("\n"),
+                title: msg.author.tag + " will not be hopping on :no_entry_sign: ",
+                description: desc,
                 color: 56319,
                 footer: {
-                    text: "Accepted by " + msg.author.tag,
+                    text: "Rejected by " + msg.author.tag,
                     icon_url: msg.author.avatarURL()
                 },
                 timestamp: new Date()

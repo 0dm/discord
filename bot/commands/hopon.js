@@ -14,17 +14,18 @@ module.exports = {
                     description: [
                          "hop on <@" + user + ">"
                     ].join("\n"),
-                    color: 3066993,
+                    color: 15105570,
                     footer: {
                         text: [ "Hop on Requested by " + msg.author.tag,
-                        "use " + guildConf.prefix + "accept to accept it"
+                        "use " + guildConf.prefix + "accept to accept",
+                        "use " + guildConf.prefix + "reject to reject"
                     ].join("\n"),
                         icon_url: msg.author.avatarURL()
                     }, 
                     timestamp: new Date()
                 }
             }).catch(() => msg.edit("error: give me embed permissions pls"));
-        } else 
-            msg.reply("nah");
+        } //else 
+           // msg.reply("soon™");
     },
 };

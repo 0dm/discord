@@ -77,12 +77,14 @@ bot.on('message', async msg => {
     if (msg.content.indexOf(guildConf.prefix) !== 0) return;
     const args = msg.content.split(/\s+/g);
     const commandName = args.shift().slice(guildConf.prefix.length).toLowerCase();
+
+    //if (!bot.commands.has(command)) return;
+    var command = bot.commands.get(commandName)
+    || bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+
     if (guildConf.cooldown > 0) {
         antiSpam();
     }
-    //if (!bot.commands.has(command)) return;
-    const command = bot.commands.get(commandName)
-        || bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
     if (!command) return;
     try {
@@ -93,15 +95,14 @@ bot.on('message', async msg => {
     }
 
     async function antiSpam() {
-        if (msg.member.hasPermission('ADMINISTRATOR')) {
-            return;
-        }
+      // if (msg.member.hasPermission('ADMINISTRATOR')) {
+        //    return;
+        //}
         if (recentMsg.has(msg.author.id)) {
             command = null;
             let spamMsg = await msg.reply(`slow down, cooldown: ${guildConf.cooldown}ms`);
-            sleep(guildConf.cooldown).then(() => {
+            func.sleep(guildConf.cooldown).then(() => {
                 spamMsg.delete();
-                return;
             })
         }
         recentMsg.add(msg.author.id);
