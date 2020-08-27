@@ -4,7 +4,7 @@ module.exports = {
     description: 'gets someone to hop on',
     execute(bot,msg,args,guildConf){
         async function asynchopon() {
-        user = msg.mentions.users.first();
+        user = msg.mentions.users.first(5);
         if (!user){
             return msg.reply('Usage:\n' + '`' + guildConf.prefix + 'hopon <user>`')
         }
@@ -13,7 +13,7 @@ module.exports = {
                 embed: {
                     title: "Hop on :question:",
                     description: [
-                         "hop on <@" + user + ">"
+                         `hop on ${user}`
                     ].join("\n"),
                     color: 15105570,
                     footer: {
