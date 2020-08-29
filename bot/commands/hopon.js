@@ -5,8 +5,10 @@ module.exports = {
     execute(bot,msg,args,guildConf){
         async function asynchopon() {
         user = msg.mentions.users.first(5);
-        if (!user){
-            return msg.reply('Usage:\n' + '`' + guildConf.prefix + 'hopon <user>`')
+        if (!user || args == ""){
+            let stop = await msg.reply(`usage: \`${guildConf.prefix}hopon <@user>\``);
+            func.sleep(3000).then(() => { stop.delete();})
+            return;
         }
         if (user != msg.author.id) { 
             msg.channel.send({
