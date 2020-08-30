@@ -5,7 +5,7 @@ module.exports = {
     execute(bot,msg,args,guildConf){
         async function asynchopon() {
         user = msg.mentions.users.first(5);
-        if (!user || args == ""){
+        if (!msg.mentions.users.first() || args == ""){
             let stop = await msg.reply(`usage: \`${guildConf.prefix}hopon <@user>\``);
             func.sleep(3000).then(() => { stop.delete();})
             return;
