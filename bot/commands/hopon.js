@@ -2,6 +2,7 @@ const func = require("../functions.js");
 const fs = require('fs');
 module.exports = {
     name: 'hopon',
+    aliases: ['join', 'come'],
     description: 'gets someone to hop on',
     execute(bot,msg,args,guildConf){
         async function asynchopon() {
@@ -29,7 +30,7 @@ module.exports = {
                 });
                 
                 return;
-            } else {msg.reply("Join a voice channel first!"); return;}
+            } else {msg.reply("join a voice channel first!"); return;}
         } 
         if (user != msg.author.id) { 
             msg.channel.send({
@@ -44,7 +45,7 @@ module.exports = {
                         "use " + guildConf.prefix + "accept to accept",
                         "use " + guildConf.prefix + "reject to reject"
                     ].join("\n"),
-                        icon_url: msg.author.avatarURL()
+                        icon_url: msg.author.avatarURL({dynamic : true})
                     }, 
                     timestamp: new Date()
                 }
