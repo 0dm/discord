@@ -9,7 +9,7 @@ module.exports = {
     name: 'accept',
     aliases: ['yes', 'ye'],
     description: 'accept your fate.',
-    execute(bot,msg,args,guildConf){
+    execute(bot,msg,args,guildConf,isBot){
         let x = Math.floor(Math.random() * (5 - 1) + 1);
         var z;
         switch (x) {
@@ -28,6 +28,23 @@ module.exports = {
             case 5:
                 z = str5;
                 break;
+        }
+        if (isBot) {
+            msg.channel.send({
+                embed: {
+                    title: "sauceBot is hopping on :white_check_mark: ",
+                    description: [
+                       "<@" + bot.user.id + "> " + z,
+                    ].join("\n"),
+                    color: 56319,
+                    footer: {
+                        text: "Accepted by " + bot.user.tag,
+                        icon_url: bot.user.avatarURL()
+                    },
+                    timestamp: new Date()
+                }
+            })
+            return;
         }
         msg.channel.send({
             embed: {

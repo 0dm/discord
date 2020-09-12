@@ -9,9 +9,12 @@
   "author": "saucy",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.3.2",
     "better-sqlite3": "^5.4.3",
     "canvas": "^2.6.1",
     "discord.js": "^12.3.1",
-    "enmap": "^5.6.1"
+    "enmap": "^5.7.1",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^4.2.7"
   }
 }

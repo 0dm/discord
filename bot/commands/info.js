@@ -2,7 +2,7 @@ const func = require("../functions.js");
 const Discord = require('discord.js');
 module.exports = {
     name: 'info',
-    aliases: 'i',
+    aliases: ['i', 'about'],
     description: 'displays bot information',
     execute(bot,msg,args){
         const embed = new Discord.MessageEmbed()

@@ -63,7 +63,7 @@ bot.on("guildCreate", guild => {
             }
         }
     })
-    defaultChannel.send('hello uwu @everyone - I am a very useful bot that is very nice and understanding :3 - use ;help to see what I can do!');
+    defaultChannel.send('hello uwu - I am a very useful bot that is very nice and understanding :3 - use ;help to see what I can do!');
 });
 
 
@@ -82,11 +82,10 @@ bot.on('message', async msg => {
     var command = bot.commands.get(commandName)
     || bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-    if (guildConf.cooldown > 0) {
-        antiSpam();
-    }
-
     if (!command) return;
+    if (guildConf.cooldown > 0) antiSpam();
+    if (!command) return;
+    
     try {
 	command.execute(bot,msg,args,guildConf)
     } catch (error) {
@@ -116,7 +115,7 @@ bot.on('message', async msg => {
 // lol this is useless
 function errorCheck(){
 	if (bot.settings && defaultSettings){
-		return 'SETTINGS --> PASSED\n MESSAGE FUNCTIONS --> PASSED\n GLOBAL ENMAP --> PASSED\n GUILD_MEMBER_ADD --> FAILED \nSERVERS: '+bot.guilds.cache.size+'\nBOT OPERATIONAL';
+		return 'SERVERS: '+bot.guilds.cache.size+'\nBOT OPERATIONAL';
 }}
 
 
