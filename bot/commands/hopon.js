@@ -29,7 +29,7 @@ module.exports = {
                 });
                 
                 return;
-            }
+            } else {msg.reply("Join a voice channel first!");}
         } 
         if (user != msg.author.id) { 
             msg.channel.send({
