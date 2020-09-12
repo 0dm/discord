@@ -70,11 +70,14 @@ bot.on("guildCreate", guild => {
 bot.on('message', async msg => {
     if (!msg.guild || msg.author.bot) return;
     const guildConf = bot.settings.ensure(msg.guild.id, defaultSettings);
-		if (msg.mentions.users.first() == myid){
-			msg.reply("the current prefix for this server is `" + guildConf.prefix + "`").then(msg => { msg.delete({timeout: 3000})})
-			.catch(console.error);
-	}
-    if (msg.content.indexOf(guildConf.prefix) !== 0) return;
+    
+    if (msg.content.indexOf(guildConf.prefix) !== 0){
+        if (msg.mentions.users.first() == myid) {
+        msg.reply("the current prefix for this server is `" + guildConf.prefix + "`").then(msg => { msg.delete({timeout: 3000})})
+        .catch(console.error);
+        }
+        return;
+    } 
     const args = msg.content.split(/\s+/g);
     const commandName = args.shift().slice(guildConf.prefix.length).toLowerCase();
 
