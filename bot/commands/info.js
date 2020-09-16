@@ -16,7 +16,7 @@ module.exports = {
         .setTimestamp()
         .addField(";help", "and get started", false)
         .addField("**Uptime:**", func.msToTime(bot.uptime) + '', false)
-        .setURL("https://saucyx.github.io/")
+        .setURL("https://0dm.github.io/")
     /*
       .addField("This is a field title, it can hold 256 characters",
       .addField("Inline Field", "They can also be inline.", true)
