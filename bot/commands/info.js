@@ -9,7 +9,7 @@ module.exports = {
         .setTitle("sauceBot")
         .setAuthor("sauceBot", bot.user.avatarURL())
         .setColor(0x10FFFF)
-        .setDescription("Hey, I'm a bot written in Discord.JS by Saucy#7777, that can do some tasks or just be completely useless.")
+        .setDescription("Hey, I'm a bot written in Discord.JS by seesaw#7777, that can do some tasks or just be completely useless.")
         .setFooter("woooooooo.")
         .setImage("https://i.imgur.com/817N9sI.gif")
         .setThumbnail(bot.user.avatarURL())
@@ -17,11 +17,6 @@ module.exports = {
         .addField(";help", "and get started", false)
         .addField("**Uptime:**", func.msToTime(bot.uptime) + '', false)
         .setURL("https://0dm.github.io/")
-    /*
-      .addField("This is a field title, it can hold 256 characters",
-      .addField("Inline Field", "They can also be inline.", true)
-      .addBlankField(true)
-    */
     msg.channel.send(embed);
     },
 };
