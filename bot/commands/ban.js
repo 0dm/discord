@@ -21,7 +21,7 @@ module.exports = {
                     color: 15158332,
                     footer: {
                         text: "Requested by " + msg.author.tag,
-                        icon_url: msg.author.avatarURL()
+                        icon_url: msg.author.avatarURL({dynamic : true})
                     }, 
                     timestamp: new Date()
                 }

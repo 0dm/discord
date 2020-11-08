@@ -55,7 +55,7 @@ module.exports = {
                 color: 56319,
                 footer: {
                     text: "Accepted by " + msg.author.tag,
-                    icon_url: msg.author.avatarURL()
+                    icon_url: msg.author.avatarURL({dynamic : true})
                 },
                 timestamp: new Date()
             }
