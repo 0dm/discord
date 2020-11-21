@@ -51,5 +51,5 @@ module.exports = {
                 }
             }).catch(() => msg.edit("error: give me embed permissions pls"));
         } 
-    }asynchopon();},
+    }asynchopon();msg.delete();},
 };

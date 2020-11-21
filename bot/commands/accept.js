@@ -60,5 +60,5 @@ module.exports = {
                 timestamp: new Date()
             }
         }).catch(() => msg.edit("error: give me embed permissions pls"));
-    },
+    msg.delete();},
 };
