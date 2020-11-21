@@ -11,6 +11,7 @@ module.exports = {
             func.sleep(5000).then(() => { stop.delete();})
             return;
         }
+        msg.delete();
         const [...varg] = args;
         const vkImage = Canvas.createCanvas(230, 219);
         const ctx = vkImage.getContext('2d');
