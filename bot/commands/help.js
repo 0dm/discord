@@ -7,7 +7,7 @@ module.exports = {
             embed: {
                 title: "Commands :notebook_with_decorative_cover: ",
                 description: [
-                    "**Utility**: `info`, `ping`, `calculate`, `search`, `hopon`, `8ball`, `killserver`, `votekick`, `avatar`",
+                    "**Utility**: `info`, `ping`, `calculate`, `search`, `hopon`, `8ball`, `killserver`, `votekick`, `avatar`, `star`",
                     "**Admin**: `kick`, `ban`, `announce`, `wipe`",
                     "**Configuration**: `setconfig`, `showconfig`"
                 ].join("\n"),

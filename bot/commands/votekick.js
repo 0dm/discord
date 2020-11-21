@@ -6,7 +6,6 @@ module.exports = {
     description: 'votekick meme but it wont actually kick because its easy to abuse...',
     execute(bot,msg,args,guildConf){
         async function asyncvotekick() {
-        var yes;
 		//if (msg.member.hasPermission('KICK_MEMBERS')){
 			let victim = msg.mentions.users.first();
 			if (!victim){
@@ -22,7 +21,7 @@ module.exports = {
                     // Actually fill the text with a solid color
                     ctx.fillText(victim.tag, vkImage.width / 11, vkImage.height / 2.7);
                     const finalimage = new Discord.MessageAttachment(vkImage.toBuffer(), `VoteKick.png`);
-                    sendimage = await msg.channel.send(finalimage);
+                    let sendimage = await msg.channel.send(finalimage);
                     sendimage.react('✅').then(() => sendimage.react('❌'));					
                           
 		//}    
