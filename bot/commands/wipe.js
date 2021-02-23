@@ -53,7 +53,7 @@ module.exports = {
                     embed: {
                         title: "Prune :x:",
                         description: [
-                            "ok retard :x:"
+                            "ok dummy :x:"
                         ].join("\n"),
                         color: 56319,
                         footer: {
