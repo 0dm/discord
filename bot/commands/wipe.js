@@ -48,7 +48,7 @@ module.exports = {
                     })
                 }).catch(() => msg.edit("error: give me embed permissions pls"));
             } else {
-                msg.reply("ok retard.");
+                msg.reply("nice one.");
                 msg.channel.send({
                     embed: {
                         title: "Prune :x:",
